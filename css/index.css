@@ -1,0 +1,33 @@
+.nav-wrapper {
+    /* Wrapper styling */
+	border: solid red 2px;
+	padding: 15px;
+	width: 200px;
+    /* Make this scrollable when needed */
+    overflow-x: auto;
+    /* We don't want vertical scrolling */
+    overflow-y: hidden;
+    /* Make an auto-hiding scroller for IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling, mac feature that allows user to flick and the scroll continues instead of dead stops */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.nav-wrapper > div {
+	color: #888;
+	font-size: 1.2em;
+	font-family: sans-serif;
+	display: inline;
+	align-items: center;
+	min-height: 44px;
+	margin-left: 10px;
+	&:first-of-type {
+		margin-left:0;
+	}
+}
